@@ -1,13 +1,32 @@
+/*
+This file is part of the MinnerJS project by Aravinda Meewalaarachchi.
+
+Copyright (C) 2016 Aravinda Meewalaarachchi <aravinda.mailbox@gmail.com>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
 
 //this function will perform a click event on given DOM object
 function minerClick( domObject,  value){
 try{
   switch (domObject) {
     case "id"    : document.getElementById(value).click();
-                   console.log("button clicked : status pass ",domObject,value);
+                   console.log("status pass : button clicked ",domObject,value);
                    break;
     case "class" : document.getElementsByClassName(value).click();
-                   console.log("button clicked : status pass ",domObject,value);
+                   console.log("status pass : button clicked",domObject,value);
                    break;
     case "xpath" : var iterator = document.evaluate( value,
                    document, null, XPathResult.ANY_TYPE, null );
@@ -18,14 +37,15 @@ try{
                    catch (e) {
                       console.log( 'Error: Document tree modified during iteration ' + e );
                    }
+                   console.log("status pass : button clicked",domObject,value);
                    break;
     case "css"   : document.getElementById(value).click();//ToDo-must impliment
-                   console.log("button clicked : status pass ",domObject,value);
+                   console.log("status pass : button clicked",domObject,value);
                    break;
-    case "tag"   :   document.getElementById(value).click();//ToDo-much more detailed implimentation
-                   console.log("button clicked : status pass ",domObject,value);
+    case "tag"   : document.getElementById(value).click();//ToDo-much more detailed implimentation
+                   console.log("status pass : button clicked",domObject,value);
                    break;
-    default      : console.log("Error: domObject type not supported");
+    default      : console.log("status fail : domObject type not supported");
 }
 }catch(err){
   console.log(err);
@@ -63,7 +83,7 @@ function isElementPresent(domObject, value){
       case "tag"   : var present = document.getElementById(value);//ToDo-much more detailed implimentation
                      return check(present);
                      break;
-      default      : console.log("Error: domObject type not supported");
+      default      : console.log("status fail : domObject type not supported");
                      return false;
   }
   }catch(err){
@@ -71,13 +91,24 @@ function isElementPresent(domObject, value){
   }
   function check(present){
     if(present!= null){
-         console.log("Element present : status pass ",domObject,value);
+         console.log("status pass : Element present",domObject,value);
          return true;
      }
     else {
-      console.log("Element not present : status fail ",domObject,value);
+      console.log("status fail : Element not present ",domObject,value);
       return false;
     }
   }
 
+}
+
+//This method will handle the browser navigations
+
+function navagateTo(url){
+  try{
+    window.location.href=url;
+    console.log("status pass : Navigated to" + url);
+  }catch(err){
+    console.log("status fail : Broken link  or no network connection");
+  }
 }
