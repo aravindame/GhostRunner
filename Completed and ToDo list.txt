@@ -1,0 +1,4 @@
+(1)Minner Click completed.
+(2)Minner Wait completed.
+(3)Minner isElementPresent completed.
+(4)Minner navigateTo completed.

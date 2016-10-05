@@ -20,6 +20,8 @@ function main(){
 wait(2000);
 if(isElementPresent('id','btn'))
     minerClick('xpath','//button[@id=\'btn\']');
+wait(2000);
+      navagateTo("http://www.googl.com");
 }
 
 $.getScript("http://127.0.0.1/file/Test/connectors/miner.js",main);
