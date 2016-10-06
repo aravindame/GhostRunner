@@ -2,3 +2,4 @@
 (2)Minner Wait completed.
 (3)Minner isElementPresent completed.
 (4)Minner navigateTo completed.
+(5)Minner navigateBack added.Not completed.
