@@ -102,12 +102,22 @@ function isElementPresent(domObject, value){
 
 }
 
-//This method will handle the browser navigations
+//This function will handle the browser navigations
 
 function navagateTo(url){
   try{
     window.location.href=url;
-    console.log("status pass : Navigated to" + url);
+    console.log("status pass : Navigated to " + url);
+  }catch(err){
+    console.log("status fail : Broken link  or no network connection");
+  }
+}
+
+//This function will navigate one step back from current position in recent history
+function navigateBack(){
+  try{
+    window.history.back();
+    console.log("status pass : Navigated one step back from current position in recent history" + url);
   }catch(err){
     console.log("status fail : Broken link  or no network connection");
   }
