@@ -52,6 +52,38 @@ try{
 }
 }
 
+function minerType(domObject, value, text){
+  try{
+    switch (domObject) {
+      case "id"    : document.getElementById(value).value = text;
+                     console.log("status pass : string "+ text +" typed on.",domObject,value);
+                     break;
+      case "class" : document.getElementsByClassName(value).value = text;
+                     console.log("status pass : string "+text+" typed on.",domObject,value);
+                     break;
+      case "xpath" : var iterator = document.evaluate( value,
+                     document, null, XPathResult.ANY_TYPE, null );
+                     try {
+                        var thisNode = iterator.iterateNext();
+                        thisNode.value = text;
+                     }
+                     catch (e) {
+                        console.log( 'Error: Document tree modified during iteration ' + e );
+                     }
+                     console.log("status pass : string "+text+" typed on.",domObject,value);
+                     break;
+      case "css"   : document.getElementById(value).value = text;
+                     console.log("status pass : string "+text+" typed on.",domObject,value);
+                     break;
+      case "tag"   : document.getElementById(value).value = text;
+                     console.log("status pass : string "+text+" typed on.",domObject,value);
+      default      : console.log("status fail : domObject type not supported");
+  }
+  }catch(err){
+    console.log(err);
+  }
+}
+
 //this function will wait until given specific time (miliseconds)
 function wait(time){
   try{
