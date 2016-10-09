@@ -19,12 +19,14 @@ limitations under the License.
 function main(){
 console.log("Test Suiet is Running");
 wait(2000);
+if(isElementPresent('id','textbox'))
+    minerType('id','textbox','Hello');
+wait(5000);
 if(isElementPresent('id','btn'))
     minerClick('xpath','//button[@id=\'btn\']');
   wait(2000);
-  navagateTo("http://www.googl.com");
+  navagateTo("https://www.google.com");
   wait(2000);
-  navigateBack();
 }
 
 $.getScript("http://127.0.0.1/file/Test/connectors/miner.js",main);
