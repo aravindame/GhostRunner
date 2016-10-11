@@ -1,1 +1,1 @@
-# MinerJs
+# GhostRunner
