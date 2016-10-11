@@ -1,5 +1,5 @@
 /*
-This file is part of the MinnerJS project by Aravinda Meewalaarachchi.
+This file is part of the GhostRunner project by Aravinda Meewalaarachchi.
 
 Copyright (C) 2016 Aravinda Meewalaarachchi <aravinda.mailbox@gmail.com>
 Licensed under the Apache License, Version 2.0 (the "License");
