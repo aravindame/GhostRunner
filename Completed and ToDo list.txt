@@ -3,3 +3,4 @@
 (3)Minner isElementPresent completed.
 (4)Minner navigateTo completed.
 (5)Minner navigateBack added.Not completed.
+(6)Minner type implemented.issue occcered.
