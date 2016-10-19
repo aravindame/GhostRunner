@@ -20,10 +20,10 @@ function main(){
 console.log("Test Suiet is Running");
 wait(2000);
 if(isElementPresent('id','textbox'))
-    minerType('id','textbox','Hello');
+    runnerType('id','textbox','Hello');
 wait(5000);
 if(isElementPresent('id','btn'))
-    minerClick('xpath','//button[@id=\'btn\']');
+    runnerClick('xpath','//button[@id=\'btn\']');
   wait(2000);
   navagateTo("https://www.google.com");
   wait(2000);
