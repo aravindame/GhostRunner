@@ -19,7 +19,7 @@ limitations under the License.
 
 
 //this function will perform a click event on given DOM object
-function minerClick( domObject,  value){
+function runnerClick( domObject,  value){
 try{
   switch (domObject) {
     case "id"    : document.getElementById(value).click();
@@ -52,7 +52,7 @@ try{
 }
 }
 
-function minerType(domObject, value, text){
+function runnerType(domObject, value, text){
   try{
     switch (domObject) {
       case "id"    : document.getElementById(value).value = text;
