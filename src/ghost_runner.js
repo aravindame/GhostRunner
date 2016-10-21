@@ -157,3 +157,40 @@ function navigateBack(){
 function getTitle(){
   return document.title;
 }
+//This function is used to retrieve the inner text of a web page. it is
+//can be used commands for verification of messages, labels, errors etc displayed
+//on the web pages.
+
+
+function getText( domObject,  value){
+try{
+  switch (domObject){
+    case "id"    : var text = document.getElementById(value).innerHTML;
+                   console.log("status pass : Inner Text= ",text);
+                   break;
+    case "class" : var text = document.getElementsByClassName(value).innerHTML;
+                   console.log("status pass : Inner Text= ",text);
+                   break;
+    case "xpath" : var iterator = document.evaluate( value,
+                   document, null, XPathResult.ANY_TYPE, null );
+                   try {
+                      var thisNode = iterator.iterateNext();
+                      var text = thisNode.innerHTML;
+                   }
+                   catch (e) {
+                      console.log( 'Error: Document tree modified during iteration ' + e );
+                   }
+                   console.log("status pass : Inner Text= ",text);
+                   break;
+    case "css"   : document.getElementById(value).click();//ToDo-must impliment
+                   console.log("status pass : button clicked",domObject,value);
+                   break;
+    case "tag"   : document.getElementById(value).click();//ToDo-much more detailed implimentation
+                   console.log("status pass : button clicked",domObject,value);
+                   break;
+    default      : console.log("status fail : domObject type not supported");
+}
+}catch(err){
+  console.log(err);
+}
+}
