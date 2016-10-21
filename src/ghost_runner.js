@@ -152,3 +152,8 @@ function navigateBack(){
     console.log("status fail : Broken link  or no network connection");
   }
 }
+//This function will return the title of the web page
+
+function getTitle(){
+  return document.title;
+}
