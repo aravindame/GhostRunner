@@ -15,21 +15,20 @@ copies or substantial portions of the Software.
 
 */
 
-function main(){
-console.log("Test Suiet is Running");
-  getText('id','btn');
-wait(2000);
-if(isElementPresent('id','textbox'))
-    runnerType('id','textbox','Hello');
-wait(5000);
-if(isElementPresent('id','btn'))
-    runnerClick('xpath','//button[@id=\'btn\']');
-  wait(2000);
-  navagateTo("https://www.google.com");
-  wait(2000);
+function main() {
+    console.log("Test Suiet is Running");
+    getText('id', 'btn');
+    wait(2000);
+    if (isElementPresent('id', 'textbox'))
+        runnerType('id', 'textbox', 'Hello');
+    wait(5000);
+    if (isElementPresent('id', 'btn'))
+        runnerClick('xpath', '//button[@id=\'btn\']');
+    selectFromDropDown('id', 'testDropDown', '10');
+    wait(2000);
 }
 
 $.getScript("http://127.0.0.1/file/Test/connectors/miner.js",main);
 function myFunction() {
-    document.getElementById("demo").innerHTML = "Its works";
+    document.getElementById("demo").innerHTML = "Button Clicked";
 }
