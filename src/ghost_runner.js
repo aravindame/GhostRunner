@@ -232,3 +232,55 @@ function getCurrentUrl() {
         console.log(err);
     }
 }
+//This command is use to select a value from a drop Down List
+
+function selectFromDropDown(domObject, value, valueToSet) {
+    try {
+        switch (domObject) {
+            case "id":
+                var dropDownList = document.getElementById(value);
+                setSelectedValue(dropDownList, valueToSet);
+                console.log("status pass : value " + valueToSet + " is selected from drop down list");
+                break;
+            case "class":
+                var dropDownList = document.getElementsByClassName(value);
+                setSelectedValue(dropDownList, valueToSet);
+                console.log("status pass : value " + valueToSet + " is selected from drop down list");
+                break;
+            case "xpath":
+                var iterator = document.evaluate(value,
+                    document, null, XPathResult.ANY_TYPE, null);
+                try {
+                    var dropDownList = iterator.iterateNext();
+                } catch (e) {
+                    console.log('Error: Document tree modified during iteration ' + e);
+                }
+                setSelectedValue(dropDownList, valueToSet);
+                console.log("status pass : value " + valueToSet + " is selected from drop down list");
+                break;
+            case "css":
+                var dropDownList = document.getElementById(value);
+                setSelectedValue(dropDownList, valueToSet);
+                console.log("status pass : value " + valueToSet + " is selected from drop down list");
+                break;
+            case "tag":
+                var dropDownList = document.getElementById(value);
+                setSelectedValue(dropDownList, valueToSet);
+                console.log("status pass : value " + valueToSet + " is selected from drop down list");
+                break;
+            default:
+                console.log("status fail : domObject type not supported");
+        }
+    } catch (err) {
+        console.log("status fail : " + err);
+    }
+
+    function setSelectedValue(dropDownList, valueToSet) {
+        for (var i = 0; i < dropDownList.options.length; i++) {
+            if (dropDownList.options[i].text.trim() == valueToSet) {
+                dropDownList.options[i].selected = true;
+                break;
+            }
+        }
+    }
+}
