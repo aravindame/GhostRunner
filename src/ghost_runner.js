@@ -76,7 +76,8 @@ function runnerType(domObject, value, text) {
                 console.log("status pass : string " + text + " typed on.", domObject, value);
                 break;
             case "css":
-                var selector = document.querySelector (value); selector.value = text;
+                var selector = document.querySelector (value); 
+                selector.value = text;
                 console.log("status pass : string " + text + " typed on.", domObject, value);
                 break;
             case "tag":
