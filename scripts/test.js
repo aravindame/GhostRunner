@@ -19,11 +19,11 @@ function main() {
     console.log("Test Suiet is Running");
     getText('id', 'btn');
     wait(2000);
-    if (isElementPresent('id', 'textbox'))
-        runnerType('id', 'textbox', 'Hello');
+    if (isElementPresent('css', '#textbox'))
+        runnerType('css', '#textbox', 'Hello');
     wait(5000);
     if (isElementPresent('id', 'btn'))
-        runnerClick('xpath', '//button[@id=\'btn\']');
+        runnerClick('css', '#btn');
     selectFromDropDown('id', 'testDropDown', '10');
     wait(2000);
 }
