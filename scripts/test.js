@@ -17,7 +17,7 @@ copies or substantial portions of the Software.
 
 function main() {
     console.log("Test Suiet is Running");
-    getText('id', 'btn');
+    getText('css', '#btn');
     wait(2000);
     if (isElementPresent('css', '#textbox'))
         runnerType('css', '#textbox', 'Hello');
