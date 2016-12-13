@@ -26,16 +26,16 @@ function TestDriver() {
     wait(2000);
 }
 
-$.getScript("http://127.0.0.1/file/Test/connectors/miner.js",TestDriver);
+$.getScript("http://127.0.0.1/file/Test/connectors/ghost_runner.js",TestDriver);
 
 ```
 Run the script:
 
-![](https://photos.google.com/photo/AF1QipP-tGzMcWMETbFoZ_okNYVfdJ60B-xp7Ij0ylR3)
+![](https://i.imgsafe.org/f992d2e94e.jpg)
 
 ## Contribution
 
-Please read the [CONTRIBUTING.md](https://github.com/aravindame/GhostRunner/CONTRIBUTING.md) file contents.
+Please read the [CONTRIBUTING.md] (https://github.com/aravindame/GhostRunner/blob/master/CONTRIBUTING.md) file contents.
 
 ## Team
 
