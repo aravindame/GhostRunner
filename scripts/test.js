@@ -28,7 +28,7 @@ function main() {
     wait(2000);
 }
 
-$.getScript("http://127.0.0.1/file/Test/connectors/miner.js",main);
+$.getScript("http://127.0.0.1/ghost_runner.js",main);
 function myFunction() {
     document.getElementById("demo").innerHTML = "Button Clicked";
 }
