@@ -23,7 +23,7 @@ function main() {
         runnerType('css', '#textbox', 'Hello');
     wait(5000);
     if (isElementPresent('id', 'btn'))
-        runnerClick('css', '#btn');
+        runnerClick('id', 'btn');
     selectFromDropDown('id', 'testDropDown', '10');
     wait(2000);
 }

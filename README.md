@@ -31,9 +31,15 @@ function TestDriver() {
 $.getScript("http://127.0.0.1/file/Test/connectors/ghost_runner.js",TestDriver);
 
 ```
+GhostRunner provied an Chrome developer extension called ghostRunner dev tools.
+Using this tool you can script your testcases, catch web elements much more
+productive way.
+
+![](https://i.imgsafe.org/25a6c0726d.png)
+
 Run the script:
 
-![](https://i.imgsafe.org/f992d2e94e.jpg)
+![](https://i.imgsafe.org/25a6e45192.png)
 
 ## Contribution
 
