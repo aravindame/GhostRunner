@@ -2,7 +2,7 @@
 This file is part of the GhostRunner project by Aravinda Meewalaarachchi.
 
 Copyright (C) 2016 Aravinda Meewalaarachchi <aravinda.mailbox@gmail.com>
-Licensed under the MIT License, Permission is hereby granted, free of charge,
+Licensed under the MIT License, Permission is here by granted, free of charge,
 to any person obtaining a copyof this software and associated documentation
 files (the "Software"), to deal in the Software without restriction,
 including without limitation the rights to use, copy, modify, merge, publish,
@@ -76,7 +76,7 @@ function runnerType(domObject, value, text) {
                 console.log("status pass : string " + text + " typed on.", domObject, value);
                 break;
             case "css":
-                var selector = document.querySelector (value); 
+                var selector = document.querySelector (value);
                 selector.value = text;
                 console.log("status pass : string " + text + " typed on.", domObject, value);
                 break;
