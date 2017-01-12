@@ -28,8 +28,6 @@ function TestDriver() {
     wait(2000);
 }
 
-$.getScript("http://127.0.0.1/file/Test/connectors/ghost_runner.js",TestDriver);
-
 ```
 GhostRunner provied an Chrome developer extension called ghostRunner dev tools.
 Using this tool you can script your testcases, catch web elements much more
